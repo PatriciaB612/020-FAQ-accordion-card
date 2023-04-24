@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1rem;
+  color: #787887;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+/* typography */
+
+h1 {
+  font-size: 2rem;
+  color: #1e1f36;
+  font-weight: 700;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 0.8125rem;
+  color: #4b4c5f;
+  font-weight: 400;
+  padding: 0.5em 0;
+}
+
+.question-text:hover,
+.question-text:focus {
+  color: #f47b56;
+  cursor: pointer;
+}
+
+.answer-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  display: none;
+}
+
+/* show answer */
+
+.show-answer .answer-text {
+  display: block;
+}
+
+/* general layout */
+
+.container-all {
+  max-width: 327px;
+  min-width: 300px;
+  width: 90%;
+  margin: 2em auto;
+}
+
+@media (min-width: 600px) {
+  .container-all {
+    max-width: 920px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border-radius: 23px;
+    background-color: #fff;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  }
+}
+
+/* illustration's side */
+
+.container-illust {
+  position: relative;
+  padding: 3em 0;
+}
+
+.pattern-mobile,
+.woman-mobile {
+  position: absolute;
+  width: 72%;
+}
+
+.woman-mobile {
+  top: -0.75rem;
+  left: 2.8rem;
+}
+
+.pattern-mobile {
+  top: 6rem;
+  left: 2.5rem;
+}
+
+.box-desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .pattern-mobile,
+  .woman-mobile {
+    display: none;
+  }
+
+  .container-illust {
+    width: 40%;
+    background-image: url(images/bg-pattern-desktop.svg),
+      url(images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 230%, 120%;
+    background-position: top 60% left 100%, top 50% left 100%;
+  }
+
+  .box-desktop {
+    display: block;
+    position: absolute;
+    max-width: 50%;
+    top: 40%;
+    left: -25%;
+  }
+}
+
+/* FAQ */
+
+.container-faq {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 23px;
+  padding: 7em 1.5em 3em;
+}
+
+.question-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer-box {
+  border-bottom: 1px solid #e8e8ea;
+}
+
+@media (min-width: 600px) {
+  .container-faq {
+    width: 60%;
+    background: transparent;
+    border-radius: 0px;
+    padding: 2em 4em 5em;
+  }
+
+  h1 {
+    text-align: left;
+  }
+}

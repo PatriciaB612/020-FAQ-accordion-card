@@ -42,10 +42,19 @@ h1 {
   display: none;
 }
 
-/* show answer */
+/* show answer and highlight question*/
 
 .show-answer .answer-text {
   display: block;
+}
+
+.show-answer .question-text {
+  font-weight: 700;
+  color: #4b4c5f;
+}
+
+.show-answer .drop-down-icon {
+  transform: rotate(180deg);
 }
 
 /* general layout */
@@ -150,5 +159,10 @@ h1 {
 
   h1 {
     text-align: left;
+  }
+
+  .question-text {
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
   }
 }

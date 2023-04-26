@@ -11,7 +11,7 @@ body {
   color: #787887;
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* typography */
